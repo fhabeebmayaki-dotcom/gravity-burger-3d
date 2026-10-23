@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>GRAVITY — Burgers That Defy Gravity</title>
+<meta name="description" content="GRAVITY is a burger bar built around one idea: flavour, suspended. Scroll and watch our double cheeseburger float.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050505'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-size='36' font-weight='900' fill='%23ff9e45' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>
+  #preloader{display:none!important}
+  .caption{position:static!important;opacity:1!important;visibility:visible!important;transform:none!important;margin:1rem 0}
+  #sequence{height:auto!important}
+  .stage{position:static!important;height:auto!important}
+  #heroCanvas{display:none}
+</style></noscript>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader" role="status" aria-live="polite" aria-label="Loading">
+  <div class="pre-inner">
+    <div class="pre-brand">GRAVITY<span class="dot">.</span></div>
+    <div class="pre-count"><span id="preCount">0</span><span class="pre-pct">%</span></div>
+    <div class="pre-bar"><span id="preBar"></span></div>
+    <div class="pre-note">Loading 147 frames of pure levitation</div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Gravity home">GRAVITY<span class="dot">.</span></a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="#menu">Menu</a>
+    <a href="#craft">Craft</a>
+    <a href="#story">Story</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <button id="cartButton" class="cart-button" type="button" aria-haspopup="dialog" aria-controls="cartDrawer">
+    Cart <span id="cartCount" class="cart-count" aria-label="items in cart">0</span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO : SCROLL SEQUENCE ============ -->
+  <section id="sequence" aria-label="Levitating burger — scroll to play">
+    <div class="stage" id="stage">
+      <img class="poster" id="heroPoster" src="poster.jpg" alt="A double cheeseburger levitating over a black studio background, crumbs suspended in mid-air" width="1600" height="904">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="stage-vignette" aria-hidden="true"></div>
+      <div class="contact-shadow" id="contactShadow" aria-hidden="true"></div>
+
+      <div class="caption caption-1" id="cap1">
+        <p class="eyebrow">Gravity Burger Bar</p>
+        <h1>ZERO<br>GRAVITY<span class="dot">.</span></h1>
+      </div>
+
+      <div class="caption caption-2" id="cap2">
+        <h2>Every ingredient,<br>suspended in mid-air.</h2>
+        <p class="caption-sub">Two smashed patties. Aged cheddar. Nothing touching the ground.</p>
+      </div>
+
+      <div class="caption caption-3" id="cap3">
+        <h2>Taste, elevated.</h2>
+        <div class="caption-cta">
+          <a class="btn btn-solid" href="#menu">See the menu</a>
+          <a class="btn btn-ghost" href="#visit">Book a table</a>
+        </div>
+      </div>
+
+      <div class="scroll-hint" id="scrollHint" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="hint-line"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO ============ -->
+  <section class="intro">
+    <p class="eyebrow">The idea</p>
+    <h2 class="intro-title">Weightless<br>by design.</h2>
+    <p class="intro-copy">Most burgers sit there. Ours hover. GRAVITY is a twelve-seat burger bar built around a single levitating double cheeseburger — smashed to order, stacked with intent, and served at exactly the altitude it deserves.</p>
+    <ul class="stats">
+      <li><strong>100%</strong><span>grass-fed Angus</span></li>
+      <li><strong>0 g</strong><span>of compromise</span></li>
+      <li><strong>12</strong><span>seats, one pass</span></li>
+      <li><strong>147</strong><span>frames of float</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu" id="menu">
+    <div class="section-head">
+      <p class="eyebrow">Eat</p>
+      <h2>The menu</h2>
+      <p class="section-sub">Eight builds. Every one of them starts on the grill and ends in the air.</p>
+    </div>
+    <div class="menu-grid">
+
+      <article class="dish">
+        <img src="images/menu-gravity.jpg" alt="The Gravity Burger — a stacked double cheeseburger" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>The Gravity Burger</h3><span class="price">$16</span></div>
+          <p>Double smashed Angus, aged cheddar, pickles, shredded lettuce, house sauce, toasted brioche.</p>
+          <button class="add-btn" type="button" data-add data-id="gravity" data-name="The Gravity Burger" data-price="16">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-ember.jpg" alt="Ember Stack burger with a charred, glossy finish" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>Ember Stack</h3><span class="price">$18</span></div>
+          <p>Flame-kissed patties, smoked cheddar, burnt-onion mayo, pickled jalapeño, charcoal-kissed bun.</p>
+          <button class="add-btn" type="button" data-add data-id="ember" data-name="Ember Stack" data-price="18">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-fireside.jpg" alt="Fireside Melt burger beside fries" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>Fireside Melt</h3><span class="price">$17</span></div>
+          <p>Slow-caramelised onions, double Swiss, garlic butter glaze — the comfort build, warmed through.</p>
+          <button class="add-btn" type="button" data-add data-id="fireside" data-name="Fireside Melt" data-price="17">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-boardroom.jpg" alt="The Boardroom — a tall, formal stacked burger" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>The Boardroom</h3><span class="price">$21</span></div>
+          <p>Triple stack, blue-cheese crumble, rocket, truffle mayo. Suits optional, appetite mandatory.</p>
+          <button class="add-btn" type="button" data-add data-id="boardroom" data-name="The Boardroom" data-price="21">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-gloss.jpg" alt="Gloss Burger with a shiny glazed bun" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>Gloss Burger</h3><span class="price">$15</span></div>
+          <p>Single patty, mirror-glazed brioche, American cheese, tomato, our signature gloss sauce.</p>
+          <button class="add-btn" type="button" data-add data-id="gloss" data-name="Gloss Burger" data-price="15">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-tower.jpg" alt="Skyline Tower — a very tall burger with fries" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>Skyline Tower</h3><span class="price">$22</span></div>
+          <p>Four patties, four cheeses, one structural engineer. Built tall, eaten taller. Serves one brave human.</p>
+          <button class="add-btn" type="button" data-add data-id="tower" data-name="Skyline Tower" data-price="22">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-chicken.jpg" alt="Orbit Chicken sandwich with crispy fried chicken" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>Orbit Chicken</h3><span class="price">$14</span></div>
+          <p>Buttermilk-fried thigh, honey-butter glaze, slaw, pickles — the one that broke orbit first.</p>
+          <button class="add-btn" type="button" data-add data-id="chicken" data-name="Orbit Chicken" data-price="14">Add to order</button>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="images/menu-steak.jpg" alt="Altitude Steak Sandwich with sliced steak" loading="lazy" width="1000" height="831">
+        <div class="dish-body">
+          <div class="dish-top"><h3>Altitude Steak Sandwich</h3><span class="price">$24</span></div>
+          <p>Charred sirloin, chimichurri, provolone, rocket on a toasted roll. Business class, burger bar prices.</p>
+          <button class="add-btn" type="button" data-add data-id="steak" data-name="Altitude Steak Sandwich" data-price="24">Add to order</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CRAFT ============ -->
+  <section class="craft" id="craft">
+    <div class="section-head">
+      <p class="eyebrow">The craft</p>
+      <h2>Every layer has a job.</h2>
+    </div>
+    <div class="craft-grid">
+      <figure class="craft-card">
+        <img src="images/craft-patty.jpg" alt="A beef patty sizzling on the grill" loading="lazy" width="1000" height="831">
+        <figcaption><strong>The smash.</strong> 90 seconds of hard contact, lacy edges, a crust that crackles.</figcaption>
+      </figure>
+      <figure class="craft-card">
+        <img src="images/craft-cheese.jpg" alt="Cheddar cheese melting over a patty" loading="lazy" width="1000" height="831">
+        <figcaption><strong>The melt.</strong> Aged cheddar, steamed under a cloche until it drapes like fabric.</figcaption>
+      </figure>
+      <figure class="craft-card">
+        <img src="images/craft-greens.jpg" alt="Fresh lettuce leaves, washed and crisp" loading="lazy" width="1000" height="831">
+        <figcaption><strong>The crunch.</strong> Ice-cold greens, cut hourly. Cold against hot is the whole point.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="story" id="story">
+    <div class="story-media">
+      <img src="images/story-chef.jpg" alt="Our chef plating a burger at the pass" loading="lazy" width="1000" height="831">
+      <img src="images/story-interior.jpg" alt="Inside the GRAVITY dining room at night" loading="lazy" width="1000" height="831">
+    </div>
+    <div class="story-copy">
+      <p class="eyebrow">Our story</p>
+      <h2>It started with a dropped burger.</h2>
+      <p>Halfway down, it looked perfect — every layer separated, floating, exactly where it belonged. We spent two years learning to serve it at that exact moment. The kitchen runs like a launch pad: one pass, twelve seats, no shortcuts, and a strict policy that nothing lands before it's ready.</p>
+      <p>Come watch it hover.</p>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="visit" id="visit">
+    <div class="section-head">
+      <p class="eyebrow">Visit</p>
+      <h2>Find the float.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-block">
+        <h3>Hours</h3>
+        <ul>
+          <li><span>Tue – Thu</span><span>12:00 – 22:00</span></li>
+          <li><span>Fri – Sat</span><span>12:00 – 00:00</span></li>
+          <li><span>Sunday</span><span>12:00 – 20:00</span></li>
+          <li><span>Monday</span><span>Closed for re-entry</span></li>
+        </ul>
+      </div>
+      <div class="visit-block">
+        <h3>Location</h3>
+        <p>Unit 9, Meridian Yard<br>14 Levitation Lane<br>Austin, TX 78701</p>
+        <p class="visit-note">Walk-ins at the counter. Bookings for the chef's rail: hello@gravityburgers.example</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-brand">GRAVITY<span class="dot">.</span></div>
+  <p>Burgers that defy gravity. A scroll-driven demo website — the hero film plays forward and backward with your scroll.</p>
+  <p class="foot-fine">Hero film: “Hamburger” by davidexyz via Pixabay (Pixabay Content License). Menu photography: Unsplash. Demo only — no real orders are taken.</p>
+  <p class="foot-fine">© 2026 GRAVITY Burger Bar. Built as a sellable demo.</p>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay" hidden></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your order" aria-hidden="true">
+  <div class="cart-head">
+    <h2>Your order</h2>
+    <button id="cartClose" class="cart-close" type="button" aria-label="Close cart">×</button>
+  </div>
+
+  <div id="cartView">
+    <p class="cart-empty" id="cartEmpty">Your tray is floating empty.<br>Add something delicious.</p>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-totals" id="cartTotals" hidden>
+      <div><span>Subtotal</span><span id="subTotal">$0.00</span></div>
+      <div><span>Tax (8.5%)</span><span id="taxTotal">$0.00</span></div>
+      <div class="grand"><span>Total</span><span id="grandTotal">$0.00</span></div>
+    </div>
+    <button class="btn btn-solid cart-checkout" id="checkoutBtn" type="button" disabled>Checkout</button>
+    <p class="cart-demo-note">Demo checkout — no payment is taken.</p>
+  </div>
+
+  <div id="confirmView" hidden>
+    <div class="confirm-badge" aria-hidden="true">✓</div>
+    <h3>Order confirmed</h3>
+    <p>Order <strong id="orderNumber">GRV-0000</strong> is on the pass.<br>Your burgers will land in about 15 minutes.</p>
+    <button class="btn btn-ghost" id="confirmDone" type="button">Back to browsing</button>
+  </div>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+<script>
+/* Safety net: if main.js ever fails to boot, never trap the visitor behind the preloader. */
+window.__gravityWatchdog = setTimeout(function () {
+  var p = document.getElementById('preloader');
+  if (p && !window.__gravityReady) { p.classList.add('is-done'); setTimeout(function(){ p.style.display = 'none'; }, 900); }
+}, 9000);
+</script>
+</body>
+</html>
